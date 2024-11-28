@@ -12,4 +12,6 @@ class Storage(Base):
     item = relationship("Item", back_populates="storage")
     shelf = relationship("Shelf", back_populates="storage")
     role = relationship("Role", back_populates="storage")
+    user_admin = relationship("UserAdmin", secondary="user_admin_storage", back_populates="storage")
+    user = relationship("User", back_populates="storage")
     

@@ -12,5 +12,6 @@ class Role(Base):
 
     opp = relationship("Opp", secondary="role_opp", back_populates="role")
     storage = relationship("Storage", back_populates="role")
+    user = relationship("User", back_populates="role")
 
 

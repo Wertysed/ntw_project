@@ -15,5 +15,8 @@ class Item(Base):
 
     storage = relationship("Storage", back_populates="item")
     box = relationship("Box", back_populates="item")
+    order = relationship("Order",secondary="order_item", back_populates="item")
+    order_item = relationship("OrderItem", back_populates="item_asso")
+
 
 
